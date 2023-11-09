@@ -11,15 +11,15 @@ import android.widget.TextView;
 import java.util.Stack;
 
 public class MainActivity extends AppCompatActivity {
-
-    private TextView resultTextView,operationEditText,debug,debug2;
+    // Declaración de variables
+    private TextView resultTextView,operationEditText;
     private String currentNumber = "";
     private String operator = "";
     private double resultado;
     private Button btn9,btn8,btn7,btn6,btn5,btn4,btn3,btn2,btn1,btn0,btnDecimal,btnPlus,btnMinus,btnMultiply,btnDivide,btnEquals,btnclean,btndel,btnizq,btnder;
     private Stack<Double> pila = new Stack<>();
 
-
+    // Eliminar el último carácter de la expresión
     private void borrarUltimoCaracter() {
         if (!operator.isEmpty()) { // Si la expresión no está vacía
             operator = operator.substring(0, operator.length() - 1); // Eliminar el último carácter de la expresión
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
             operationEditText.setText(operator); // Mostrar la expresión en el TextView
         }
     }
+    // Añadir número a la expresión
     private void appendNumber(String number) {
         currentNumber += number;
         operationEditText.setText(currentNumber);
@@ -150,8 +151,7 @@ public class MainActivity extends AppCompatActivity {
 
         resultTextView = findViewById(R.id.result);
         operationEditText = findViewById(R.id.Operacion);
-        debug = findViewById(R.id.textView2);
-        debug2 = findViewById(R.id.textView3);
+
         btn9 = findViewById(R.id.btn9);
         btn8 = findViewById(R.id.btn8);
         btn7 = findViewById(R.id.btn7);
@@ -295,7 +295,7 @@ public class MainActivity extends AppCompatActivity {
 
                 operator = "+";
                 appendNumber(operator);
-                debug.setText(operator);
+
             }
         });
 
@@ -306,7 +306,7 @@ public class MainActivity extends AppCompatActivity {
 
                 operator = "-";
                 appendNumber(operator);
-                debug.setText(operator);
+
             }
         });
 
@@ -317,7 +317,7 @@ public class MainActivity extends AppCompatActivity {
 
                 operator = "*";
                 appendNumber(operator);
-                debug.setText(operator);
+
             }
         });
 
@@ -328,7 +328,7 @@ public class MainActivity extends AppCompatActivity {
 
                 operator = "/";
                 appendNumber(operator);
-                debug.setText(operator);
+
             }
         });
 
