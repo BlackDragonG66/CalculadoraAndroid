@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:theme="@style/AppTheme"
+    tools:context=".MainActivity">
+
+    <Space
+        android:id="@+id/spaceTop"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/Result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resultado"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:layout_below="@+id/spaceTop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <Space
+        android:id="@+id/spaceMiddle"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_below="@+id/Result"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/Operation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="Operacion"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_below="@+id/spaceMiddle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <!-- Button Rows -->
+    <LinearLayout
+        android:id="@+id/buttonRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/Operation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnLimpia"
+            style="@style/RoundedButton"
+            android:text="C" />
+
+        <Button
+            android:id="@+id/btnizquierdo"
+            style="@style/RoundedButton"
+            android:text="(" />
+
+        <Button
+            android:id="@+id/btnderecho"
+            style="@style/RoundedButton"
+            android:text=")" />
+
+        <Button
+            android:id="@+id/btnBorrar"
+            style="@style/RoundedButton"
+            android:text="del" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/buttonRow1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/btn9"
+            style="@style/RoundedButton"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/btn8"
+            style="@style/RoundedButton"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/btn7"
+            style="@style/RoundedButton"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/btn_plus"
+            style="@style/RoundedButton"
+            android:text="+" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonRow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/buttonRow2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/btn6"
+            style="@style/RoundedButton"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/btn5"
+            style="@style/RoundedButton"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/btn4"
+            style="@style/RoundedButton"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/btn_negativo"
+            style="@style/RoundedButton"
+            android:text="-" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonRow4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/buttonRow3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/btn3"
+            style="@style/RoundedButton"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/btn2"
+            style="@style/RoundedButton"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/btn1"
+            style="@style/RoundedButton"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/btn_por"
+            style="@style/RoundedButton"
+            android:text="*" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonRow5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/buttonRow4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/btn_decimal"
+            style="@style/RoundedButton"
+            android:text="." />
+
+        <Button
+            android:id="@+id/btn0"
+            style="@style/RoundedButton"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/btn_res"
+            style="@style/RoundedButton"
+            android:text="=" />
+
+        <Button
+            android:id="@+id/btn_div"
+            style="@style/RoundedButton"
+            android:text="/" />
+    </LinearLayout>
+
+</RelativeLayout>
